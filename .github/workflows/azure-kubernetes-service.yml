@@ -41,7 +41,7 @@ env:
   CLUSTER_NAME: "aks_cluster_1"
   DEPLOYMENT_MANIFEST_PATH: "k8s/webapp-deployment.yaml"
   # the following shall be moved to secrets
-  AZURE_CLIENT_ID: "e4327374-dd31-4f21-82a3-189797acce5a"
+  AZURE_CLIENT_ID: "1e5555af-e0dc-482d-8634-922761c5373c"
   AZURE_TENANT_ID: "d83ed40c-439f-4c89-8d44-5d579f69c76e"
   AZURE_SUBSCRIPTION_ID: "ed8008aa-2664-4314-a60c-d14b71dd648f"
 
