@@ -36,7 +36,7 @@ on:
 
 env:
   # to be update automatically
-  version: "1.0"
+  version: "1.1"
   AZURE_CONTAINER_REGISTRY: "acrtrial1"
   CONTAINER_NAME: "webapp"
   RESOURCE_GROUP: "rg_1"

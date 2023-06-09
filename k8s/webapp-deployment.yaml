@@ -17,7 +17,7 @@ spec:
       containers:
       - name: webapp
         # version to be updated automatically, here and in the workflow of the git actions
-        image: acrtrial1.azurecr.io/webapp:1.0
+        image: acrtrial1.azurecr.io/webapp:1.1
         ports:
         - containerPort: 5173
 ---
