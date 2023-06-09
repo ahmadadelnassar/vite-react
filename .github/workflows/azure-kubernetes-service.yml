@@ -55,6 +55,10 @@ jobs:
       # Checks out the repository this file is in
       - uses: actions/checkout@v3
 
+      # installs azure cli
+      - name: Install azure-cli
+        uses: pietrobolcato/install-azure-cli-action@v1.0.1
+        
       # Logs in with your Azure credentials
       - name: Azure login
         uses: azure/login@v1.4.6
@@ -78,6 +82,10 @@ jobs:
     steps:
       # Checks out the repository this file is in
       - uses: actions/checkout@v3
+      
+      # installs azure cli
+      - name: Install azure-cli
+        uses: pietrobolcato/install-azure-cli-action@v1.0.1
 
       # Logs in with your Azure credentials
       - name: Azure login
