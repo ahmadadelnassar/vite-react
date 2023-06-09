@@ -1,4 +1,4 @@
 export default function Index() {
-  return <div><div>Node js is a run time environment. Comes with its pacjage manger npm</div><div>React is a package that helps design web site front ends</div>
-    <div>vite is a builder that quickly builds web sites</div></div>;
+  return <div><div>Hi, I am a web app orchestrates by K8s, hoset on AKS, using docker image from ACR.</div><div>Ahmad Created me!</div>
+    <div>Man, He is really a good devop cloud engineer!</div></div>;
     }
