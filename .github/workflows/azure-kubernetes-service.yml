@@ -13,7 +13,7 @@
 # 1. Set the following secrets in your repository (instructions for getting these can be found at https://docs.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-cli%2Clinux):
 #    - AZURE_CLIENT_ID
 #    - AZURE_TENANT_ID
-#    - AZURE_SUBSCRIPTION_ID ed8008aa-2664-4314-a60c-d14b71dd648f
+#    - AZURE_SUBSCRIPTION_ID
 #
 # 2. Set the following environment variables (or replace the values below):
 #    - AZURE_CONTAINER_REGISTRY (name of your container registry / ACR)
@@ -35,6 +35,8 @@ on:
   workflow_dispatch:
 
 env:
+  # to be update automatically
+  version: "1.0"
   AZURE_CONTAINER_REGISTRY: "acrtrial1"
   CONTAINER_NAME: "webapp"
   RESOURCE_GROUP: "rg_1"
@@ -70,7 +72,7 @@ jobs:
       # Builds and pushes an image up to your Azure Container Registry
       - name: Build and push image to ACR
         run: |
-          az acr build --image ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }} --registry ${{ env.AZURE_CONTAINER_REGISTRY }} -g ${{ env.RESOURCE_GROUP }} .
+          az acr build --image ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ env.version }} --registry ${{ env.AZURE_CONTAINER_REGISTRY }} -g ${{ env.RESOURCE_GROUP }} .
 
   deploy:
     permissions:
