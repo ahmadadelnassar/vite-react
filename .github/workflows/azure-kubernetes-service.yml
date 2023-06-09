@@ -44,6 +44,7 @@ env:
   AZURE_CLIENT_ID: "82c15236-b662-4566-bc33-7aec75140724"
   AZURE_TENANT_ID: "d83ed40c-439f-4c89-8d44-5d579f69c76e"
   AZURE_SUBSCRIPTION_ID: "ed8008aa-2664-4314-a60c-d14b71dd648f"
+  AZURE_SUBSCRIPTION_SECRET: "Sjm8Q~pmrRsbLnMRlBqXOucukeWLCkvo1WYRQcgI"
 
 jobs:
   buildImage:
@@ -61,11 +62,10 @@ jobs:
         
       # Logs in with your Azure credentials
       - name: Azure login
-        uses: azure/login@v1.4.6
+        uses: Azure/login@v1
         with:
-          client-id: ${{ env.AZURE_CLIENT_ID }}
-          tenant-id: ${{ env.AZURE_TENANT_ID }}
-          subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
+          creds: '{"clientId":"${{ env.AZURE_CLIENT_ID }}","clientSecret":"${{ env.AZURE_SUBSCRIPTION_SECRET }}","subscriptionId":"${{ env.AZURE_SUBSCRIPTION_ID }}","tenantId":"${{ env.AZURE_TENANT_ID }}"}'
+  
 
       # Builds and pushes an image up to your Azure Container Registry
       - name: Build and push image to ACR
