@@ -37,7 +37,7 @@ on:
 env:
   AZURE_CONTAINER_REGISTRY: "acrtrial1"
   CONTAINER_NAME: "webapp"
-  RESOURCE_GROUP: "rg1"
+  RESOURCE_GROUP: "rg_1"
   CLUSTER_NAME: "aks_cluster_1"
   DEPLOYMENT_MANIFEST_PATH: "k8s/webapp-deployment.yaml"
   # the following shall be moved to secrets
